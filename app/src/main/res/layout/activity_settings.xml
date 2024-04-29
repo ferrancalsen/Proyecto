@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_half_edited"
+    tools:context=".SettingsActivity">
+
+    <!-- Guideline vertical al 19.5% -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_19.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.195"/>
+
+    <!-- Guideline vertical al 73.5% -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_73.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.735" />
+
+    <LinearLayout
+        android:id="@+id/layoutGeolocalizacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/imagenGeolocalizacion"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/geolocation"/>
+
+        <TextView
+            android:id="@+id/textoGeolocalizacion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="30dp"
+            android:text="Geolocalización"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchGeolocalizacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_marginEnd="-10dp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:textOff="@string/app_name"
+            android:theme="@style/CustomSwitch"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutNotificaciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="25dp"
+        android:layout_marginTop="-30dp"
+        app:layout_constraintTop_toBottomOf="@+id/layoutGeolocalizacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imagenNotificaciones"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/notifications" />
+
+        <TextView
+            android:id="@+id/textoNotificaciones"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="Notificaciones"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchNotificaciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="-10dp"
+            android:padding="20dp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:textOff="@string/app_name"
+            android:theme="@style/CustomSwitch"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
