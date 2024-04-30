@@ -1,0 +1,25 @@
+name: Subir APK a App Center
+ 
+on:
+  push:
+    branches: [ main ]
+ 
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - uses: actions/checkout@v3
+ 
+      - name: Configurar Gradle
+        uses: gradle/setup-gradle@v3
+ 
+      - name: Construir APK
+        run: ./gradlew assembleRelease
+ 
+      - name: Subir APK a App Center
+        uses: microsoft/appcenter-cli@v1.3.4
+        with:
+          appName: ${{ secrets.Nexus_Apk }}
+          token: ${{ secrets.232bd39f950cbb749733426c92a0e737cfed9cc7 }}
+          file: app/build/outputs/apk/release/app-release.apk
