@@ -20,7 +20,7 @@ jobs:
       - name: Subir APK a App Center
         uses: microsoft/appcenter-cli@v1.3.4
         with:
-          appName: Nexus_Apk
+          appName: ${{ secrets.Nexus_App }}
           token: ${{ secrets.232bd39f950cbb749733426c92a0e737cfed9cc7 }}
-          group: Collaborators 
+          group: ${{ secrets.Collaborators }} 
           file: app/build/outputs/apk/release/app-release.apk
