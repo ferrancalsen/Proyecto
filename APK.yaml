@@ -22,5 +22,5 @@ jobs:
         with:
           appName: ${{ secrets.Nexus_Apk }}
           token: ${{ secrets.232bd39f950cbb749733426c92a0e737cfed9cc7 }}
-          group: ${{ secrets.APP_CENTER_GROUP }}
+          group: ${{ secrets.Collaborators }}
           file: app/build/outputs/apk/release/app-release.apk
