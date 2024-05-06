@@ -19,10 +19,8 @@ jobs:
       - name: Construir APK
         run: ./gradlew assembleRelease
  
-      - name: Subir APK a App Center
-        uses: microsoft/appcenter-cli@v1.3.4
+     - name: Distribuir APK a Firebase App Distribution
+        uses: wzieba/Firebase-Distribution-Github-Action@v1.5.0
         with:
-          appName: ${{ secrets.Nexus_App }}
-          token: ${{ secrets.232bd39f950cbb749733426c92a0e737cfed9cc7 }}
-          group: ${{ secrets.Collaborators }} 
+          appId: ${{ secrets.1:115198699492:android:0998dc6499a8560a4ac9f1 }}
           file: app/build/outputs/apk/release/app-release.apk
