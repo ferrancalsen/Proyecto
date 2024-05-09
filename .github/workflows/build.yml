@@ -1,0 +1,26 @@
+name: Subir APK a App Center
+ 
+on:
+  push:
+    branches: [ main ]
+ 
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - uses: actions/checkout@v3
+ 
+      - name: Configurar Gradle
+        uses: gradle/setup-gradle@v3
+        with:
+         gradle-version: '8.0'
+ 
+      - name: Construir APK
+        run: ./gradlew assembleRelease
+ 
+     - name: Distribuir APK a Firebase App Distribution
+        uses: wzieba/Firebase-Distribution-Github-Action@v1.5.0
+        with:
+          appId: ${{ secrets.1:115198699492:android:0998dc6499a8560a4ac9f1 }}
+          file: app/build/outputs/apk/release/app-release.apk
