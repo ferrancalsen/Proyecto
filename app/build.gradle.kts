@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -45,4 +46,7 @@ dependencies {
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.28")
     implementation("com.google.android.gms:play-services-maps:18.0.1")
+
+    implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
+    implementation("com.google.firebase:firebase-analytics")
 }

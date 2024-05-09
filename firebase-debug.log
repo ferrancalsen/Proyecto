@@ -1,0 +1,25 @@
+[debug] [2024-05-09T13:41:42.240Z] ----------------------------------------------------------------------
+[debug] [2024-05-09T13:41:42.248Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ferrancalsen\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-05-09T13:41:42.249Z] CLI Version:   13.8.0
+[debug] [2024-05-09T13:41:42.249Z] Platform:      win32
+[debug] [2024-05-09T13:41:42.249Z] Node Version:  v20.11.1
+[debug] [2024-05-09T13:41:42.249Z] Time:          Thu May 09 2024 15:41:42 GMT+0200 (hora de verano de Europa central)
+[debug] [2024-05-09T13:41:42.249Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-09T13:41:42.308Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-09T13:41:42.308Z] > authorizing via signed-in user (fcalonges@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\ferrancalsen\AndroidStudioProjects\Monlau_Tracker
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
