@@ -9,7 +9,13 @@ jobs:
     runs-on: ubuntu-latest
  
     steps:
-      - uses: actions/checkout@v3
+      uses: actions/checkout@v4
+    - name: set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: gradle
  
       - name: Configurar Gradle
         uses: gradle/setup-gradle@v3
@@ -23,4 +29,6 @@ jobs:
         uses: wzieba/Firebase-Distribution-Github-Action@v1.5.0
         with:
           appId: ${{ secrets.1:115198699492:android:0998dc6499a8560a4ac9f1 }}
+          token: ${{ secrets.BCpW84w6zfJdwnf4DhzSjwk-kDr6lgmuY6OnO7_Hc7Pu_EIDtzUgofnBpmQCOJ49vsd09gngLdhQUftbFLJUYUI }}
+          groups: ${{ secrets.test }}
           file: app/build/outputs/apk/release/app-release.apk
