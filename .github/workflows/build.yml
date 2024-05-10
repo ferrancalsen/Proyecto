@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Checkout del código
         uses: actions/checkout@v2
+
+      - name: Conceder permisos de ejecución a gradlew
+        run: chmod +x ./gradlew
  
       - name: Configurar Gradle
         uses: gradle/setup-gradle@v3
