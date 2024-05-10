@@ -12,11 +12,10 @@ jobs:
       - name: Checkout del código
         uses: actions/checkout@v2
  
-      - name: Configurar Gradle
-        uses: gradle/setup-gradle@v1
-         
-      - name: Conceder permisos de ejecución a gradlew
-        run: chmod +x ./gradlew
+      - name: set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
         
       - name: Construir APK
         run: ./gradlew assembleRelease
